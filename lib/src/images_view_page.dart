@@ -361,7 +361,7 @@ class _ImagesViewPageState extends State<ImagesViewPage>
           color: Colors.transparent,
           child: Center(
             child: Text(
-              'Done',
+              'Next',
               style: GoogleFonts.nunitoSans(
                 fontWeight: FontWeight.w700,
                 fontSize: 15,
