@@ -336,7 +336,18 @@ class _ImagesViewPageState extends State<ImagesViewPage>
       width: width,
       child: Row(
         mainAxisSize: MainAxisSize.min,
-        children: [existButton(), const Spacer(), doneButton()],
+        children: [
+          const Spacer(),
+          Text(
+            'New Post',
+            style: GoogleFonts.nunitoSans(
+              fontWeight: FontWeight.w700,
+              fontSize: 15,
+              color: const Color.fromRGBO(46, 46, 46, 1),
+            ),
+          ),
+          doneButton(),
+        ],
       ),
     );
   }
