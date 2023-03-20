@@ -336,8 +336,9 @@ class _ImagesViewPageState extends State<ImagesViewPage>
       width: width,
       child: Row(
         mainAxisSize: MainAxisSize.min,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          const Spacer(),
+          const SizedBox(),
           Text(
             'New Post',
             style: GoogleFonts.nunitoSans(
