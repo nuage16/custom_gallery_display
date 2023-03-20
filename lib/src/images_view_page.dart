@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:google_fonts/google_fonts.dart';
 import 'package:image_crop/image_crop.dart';
 import 'package:custom_gallery_display/custom_gallery_display.dart';
 import 'package:custom_gallery_display/src/crop_image_view.dart';
@@ -353,10 +354,23 @@ class _ImagesViewPageState extends State<ImagesViewPage>
     return ValueListenableBuilder(
       valueListenable: indexOfSelectedImages,
       builder: (context, List<int> indexOfSelectedImagesValue, child) =>
-          IconButton(
-        icon: const Icon(Icons.arrow_forward_rounded,
-            color: Colors.blue, size: 30),
-        onPressed: () async {
+          GestureDetector(
+        child: Container(
+          width: 100,
+          height: 43,
+          color: Colors.transparent,
+          child: Center(
+            child: Text(
+              'Done',
+              style: GoogleFonts.nunitoSans(
+                fontWeight: FontWeight.w700,
+                fontSize: 15,
+                color: const Color.fromRGBO(235, 81, 58, 1),
+              ),
+            ),
+          ),
+        ),
+        onTap: () async {
           double aspect = expandImage.value ? 6 / 8 : 1.0;
           if (widget.multiSelectionMode.value && widget.multiSelection) {
             if (areaOfCropsKeys.value.length !=
