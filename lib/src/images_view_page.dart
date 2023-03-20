@@ -354,7 +354,7 @@ class _ImagesViewPageState extends State<ImagesViewPage>
     return ValueListenableBuilder(
       valueListenable: indexOfSelectedImages,
       builder: (context, List<int> indexOfSelectedImagesValue, child) =>
-          GestureDetector(
+          InkWell(
         child: Container(
           width: 100,
           height: 43,
