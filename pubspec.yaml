@@ -1,7 +1,7 @@
 name: custom_gallery_display
 description: Customization of the gallery display or even camera and video.
 publish_to: 'none'
-version: 0.5.0
+version: 0.5.1
 homepage: https://github.com/AhmedAbdoElhawary/custom_gallery_display.git
 
 environment:
