@@ -1,7 +1,6 @@
 import 'dart:io';
 import 'dart:math';
 import 'dart:ui' as ui;
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
 
@@ -45,8 +44,7 @@ class CustomCrop extends StatefulWidget {
       context.findAncestorStateOfType<CustomCropState>();
 }
 
-class CustomCropState extends State<CustomCrop>
-    with TickerProviderStateMixin, Drag {
+class CustomCropState extends State<CustomCrop> with TickerProviderStateMixin {
   final _surfaceKey = GlobalKey();
 
   late final AnimationController _activeController;
