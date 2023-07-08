@@ -1,6 +1,7 @@
 name: custom_gallery_display
+publish_to: 'none'
 description: Customization of the gallery display or even camera and video.
-version: 0.5.2
+version: 0.5.3
 homepage: https://github.com/AhmedAbdoElhawary/custom_gallery_display.git
 
 environment:
@@ -12,7 +13,9 @@ dependencies:
     sdk: flutter
   photo_manager: ^2.2.1
   shimmer: ^2.0.0
-  image_crop: ^0.4.1
+  image_crop:
+    git:
+      url: https://github.com/tsafundzic/image_crop.git
   camera: ^0.10.0+1
   image: ^3.2.0
   video_player: ^2.4.5
