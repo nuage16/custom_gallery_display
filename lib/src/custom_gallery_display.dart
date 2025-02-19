@@ -15,6 +15,8 @@ class CustomGalleryDisplay extends StatefulWidget {
   final PickerSource pickerSource;
   final bool cropImage;
   final bool showImagePreview;
+  final String customTitle;
+  final String customNext;
 
   const CustomGalleryDisplay.normalDisplay({
     this.displaySource = DisplaySource.gallery,
@@ -22,6 +24,8 @@ class CustomGalleryDisplay extends StatefulWidget {
     this.galleryDisplaySettings,
     this.pickerSource = PickerSource.image,
     required this.onDone,
+     this.customTitle = 'New Post',
+     this.customNext = 'Next',
     super.key,
   })  : showImagePreview = false,
         cropImage = false;
@@ -32,6 +36,8 @@ class CustomGalleryDisplay extends StatefulWidget {
     this.pickerSource = PickerSource.image,
     this.cropImage = true,
     required this.onDone,
+    this.customTitle = 'New Post',
+    this.customNext = 'Next',
     super.key,
   }) : showImagePreview = true;
 
@@ -316,6 +322,8 @@ class CustomGalleryDisplayState extends State<CustomGalleryDisplay>
       multiSelection: widget.multiSelection,
       showInternalVideos: showInternalVideos,
       showInternalImages: showInternalImages,
+      customTitle: widget.customTitle,
+      customNext: widget.customNext,
     );
   }
 

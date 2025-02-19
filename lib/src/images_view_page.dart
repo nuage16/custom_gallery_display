@@ -29,6 +29,10 @@ class ImagesViewPage extends StatefulWidget {
   final Color blackColor;
   final bool showImagePreview;
   final SliverGridDelegateWithFixedCrossAxisCount gridDelegate;
+
+  final String customNext;
+  final String customTitle;
+
   const ImagesViewPage({
     Key? key,
     required this.multiSelectedImages,
@@ -45,6 +49,8 @@ class ImagesViewPage extends StatefulWidget {
     required this.blackColor,
     required this.showImagePreview,
     required this.gridDelegate,
+    required this.customTitle,
+    required this.customNext,
   }) : super(key: key);
 
   @override
@@ -340,7 +346,7 @@ class _ImagesViewPageState extends State<ImagesViewPage>
         children: [
           const SizedBox(),
           Text(
-            'New Post',
+            widget.customTitle,
             style: GoogleFonts.nunitoSans(
               fontWeight: FontWeight.w700,
               fontSize: 15,
@@ -373,7 +379,7 @@ class _ImagesViewPageState extends State<ImagesViewPage>
           color: Colors.transparent,
           child: Center(
             child: Text(
-              'Next',
+              widget.customNext,
               style: GoogleFonts.nunitoSans(
                 fontWeight: FontWeight.w700,
                 fontSize: 15,
