@@ -343,7 +343,6 @@ class _ImagesViewPageState extends State<ImagesViewPage>
       height: 56,
       width: width,
       child: Row(
-        mainAxisSize: MainAxisSize.min,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           const SizedBox(width: 16),
