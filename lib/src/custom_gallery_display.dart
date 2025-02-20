@@ -17,6 +17,7 @@ class CustomGalleryDisplay extends StatefulWidget {
   final bool showImagePreview;
   final String customTitle;
   final String customNext;
+  final Widget? leading;
 
   const CustomGalleryDisplay.normalDisplay({
     this.displaySource = DisplaySource.gallery,
@@ -26,6 +27,7 @@ class CustomGalleryDisplay extends StatefulWidget {
     required this.onDone,
      this.customTitle = 'New Post',
      this.customNext = 'Next',
+    this.leading,
     super.key,
   })  : showImagePreview = false,
         cropImage = false;
@@ -38,6 +40,7 @@ class CustomGalleryDisplay extends StatefulWidget {
     required this.onDone,
     this.customTitle = 'New Post',
     this.customNext = 'Next',
+    this.leading,
     super.key,
   }) : showImagePreview = true;
 
@@ -324,6 +327,7 @@ class CustomGalleryDisplayState extends State<CustomGalleryDisplay>
       showInternalImages: showInternalImages,
       customTitle: widget.customTitle,
       customNext: widget.customNext,
+      leading: widget.leading
     );
   }
 

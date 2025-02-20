@@ -32,6 +32,7 @@ class ImagesViewPage extends StatefulWidget {
 
   final String customNext;
   final String customTitle;
+  final Widget? leading;
 
   const ImagesViewPage({
     Key? key,
@@ -51,6 +52,7 @@ class ImagesViewPage extends StatefulWidget {
     required this.gridDelegate,
     required this.customTitle,
     required this.customNext,
+    this.leading,
   }) : super(key: key);
 
   @override
@@ -342,9 +344,11 @@ class _ImagesViewPageState extends State<ImagesViewPage>
       width: width,
       child: Row(
         mainAxisSize: MainAxisSize.min,
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const SizedBox(),
+          const SizedBox(width: 16),
+          if(widget.leading != null) widget.leading!,
+          const SizedBox(width: 16),
           Text(
             widget.customTitle,
             style: GoogleFonts.nunitoSans(
