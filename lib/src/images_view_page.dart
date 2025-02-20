@@ -118,6 +118,7 @@ class _ImagesViewPageState extends State<ImagesViewPage>
   }
 
   late Widget forBack;
+
   @override
   void initState() {
     _fetchNewMedia(currentPageValue: 0);
@@ -343,17 +344,20 @@ class _ImagesViewPageState extends State<ImagesViewPage>
       height: 56,
       width: width,
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           const SizedBox(width: 16),
-          if(widget.leading != null) widget.leading!,
+          if (widget.leading != null) widget.leading!,
           const SizedBox(width: 16),
-          Text(
-            widget.customTitle,
-            style: GoogleFonts.nunitoSans(
-              fontWeight: FontWeight.w700,
-              fontSize: 15,
-              color: const Color.fromRGBO(46, 46, 46, 1),
+          Expanded(
+            child: Text(
+              widget.customTitle,
+              textAlign: TextAlign.center,
+              style: GoogleFonts.nunitoSans(
+                fontWeight: FontWeight.w700,
+                fontSize: 15,
+                color: const Color.fromRGBO(46, 46, 46, 1),
+              ),
             ),
           ),
           doneButton(),
