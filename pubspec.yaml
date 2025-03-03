@@ -16,6 +16,7 @@ dependencies:
   image_crop:
     git:
       url: https://github.com/mytalkgitadmin/image_crop.git
+      ref: swom_3.29.0
   camera: ^0.10.0+1
   image: ^3.2.0
   video_player: ^2.4.5
