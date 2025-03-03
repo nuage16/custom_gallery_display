@@ -15,7 +15,7 @@ dependencies:
   shimmer: ^2.0.0
   image_crop:
     git:
-      url: https://github.com/tsafundzic/image_crop.git
+      url: https://github.com/mytalkgitadmin/image_crop.git
   camera: ^0.10.0+1
   image: ^3.2.0
   video_player: ^2.4.5
